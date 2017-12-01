@@ -1,38 +1,71 @@
 
 public class TwoIntegers 
 {
-	private int num1;
-	private int num2;
-	private int sum;
+	private double int1;
+	private double int2;
 	public TwoIntegers()
 	{
-		num1 = 0;
-		num2 = 0;
+		int1 = 0;
+		int2 = 0;
 	}
-	public TwoIntegers(int num1, int num2, int sum)
+	public TwoIntegers(double int1, double int2)
 	{
-		this.num1 = num1;
-		this.num2 = num2;
-		this.sum = sum;
+		this.int1 = int1;
+		this.int2 = int2;
 	}
-	public int sum()
+	public String toNumberSize()
 	{
-		return sum;
+		String numberSize = "";
+		int largeNumber = 0;
+		int smallNumber = 0;
+		if(int1 > int2)
+		{
+			System.out.println(int1 + " is the biggest number.");
+			System.out.println(int2 + " is the smallest number.");
+			int1 = largeNumber;
+			int2 = smallNumber;
+		}
+		else if(int1 == int2)
+		{
+			System.out.println("The numbers are equal to each other.");
+		}
+		else
+		{
+			System.out.println(int2 + " is the biggest number.");
+			System.out.println(int1 + " is the smallest number.");
+			int2 = largeNumber;
+			int1 = smallNumber;
+		}
+		return numberSize;
 	}
-	public int getNum1()
+	public String toArithmetic()
 	{
-		return num1;
+		String arithmetic = "";
+		double sum = 0;
+		sum = int1 + int2;
+		double product = 0;
+		product = int1 * int2;
+		double difference = 0;
+		difference = int1 - int2;
+		double quotient = 0;
+		quotient = int1 / int2;
+		arithmetic = "This is your sum = " + sum + "\n" + "This is your product = " + product + "\n" + "This is your difference = " + difference + "\n" + "This is your quotient =  " + quotient;
+		return arithmetic;
 	}
-	public int getNum2()
+	public double getInt1()
 	{
-		return num2;
+		return int1;
 	}
-	public void setNum1(int num1)
+	public double getInt2()
 	{
-		this.num1 = num1;
+		return int2;
 	}
-	public void setNum2(int num2)
+	public void setInt1(int int1)
 	{
-		this.num2 = num2;
+		this.int1 = int1;
+	}
+	public void setint2(int int2)
+	{
+		this.int2 = int2;
 	}
 }

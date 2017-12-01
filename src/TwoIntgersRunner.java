@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 public class TwoIntgersRunner 
 {
@@ -5,16 +6,15 @@ public class TwoIntgersRunner
 	public static void main(String[] args)
 	{
 		Scanner input = new Scanner(System.in);	
-		int num1 = 0;
-		int num2 = 0;
-		int sum = num1 + num2;
-		
-		System.out.println("Enter first integer");
-		num1 = input.nextInt();
-		System.out.println("Enter second integer");
-		num2 = input.nextInt();
-		sum = num1 + num2;
-		System.out.println(sum);
-		
+		System.out.println("This will add the first and second number together");
+		System.out.println("Plug in your first number");
+		double int1 = input.nextInt();
+		System.out.println("Plug in your second number");
+		double int2 = input.nextInt();
+		TwoIntegers twointegers = new TwoIntegers(int1, int2);
+		String arithmetic = twointegers.toArithmetic();
+		System.out.println(arithmetic);
+		String numberSize = twointegers.toNumberSize();
+		System.out.println(numberSize);
 	}
 }
